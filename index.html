@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCP Installer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">MCP Installer</h1>
+        
+        <div class="cards-container">
+            <!-- Stitch MCP Card -->
+            <div class="card">
+                <div class="icon-container">
+                    <svg class="icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="stitchGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4c669f;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#3b5998;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M30 20 L70 20 M50 20 L50 80 M30 50 L70 50" stroke="url(#stitchGradient)" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h2 class="card-title">Stitch MCP</h2>
+                <button class="install-btn" onclick="installStitch()">Install</button>
+            </div>
+
+            <!-- NotebookLM MCP Card -->
+            <div class="card">
+                <div class="icon-container">
+                    <svg class="icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="notebookGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#1fa2ff;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#a6ffcb;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <rect x="25" y="15" width="50" height="70" rx="3" fill="none" stroke="url(#notebookGradient)" stroke-width="3"/>
+                        <line x1="35" y1="30" x2="65" y2="30" stroke="url(#notebookGradient)" stroke-width="2"/>
+                        <line x1="35" y1="45" x2="65" y2="45" stroke="url(#notebookGradient)" stroke-width="2"/>
+                        <line x1="35" y1="60" x2="65" y2="60" stroke="url(#notebookGradient)" stroke-width="2"/>
+                    </svg>
+                </div>
+                <h2 class="card-title">NotebookLM MCP</h2>
+                <button class="install-btn" onclick="installNotebookLM()">Install</button>
+            </div>
+        </div>
+
+        <div id="status" class="status"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

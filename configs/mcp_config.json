@@ -1,0 +1,15 @@
+{
+    "mcpServers": {
+        "stitch": {
+            "command": "/usr/bin/python3",
+            "args": [
+                "-u",
+                "/Users/tskim/.gemini/antigravity/stitch_proxy.py"
+            ]
+        },
+        "notebooklm": {
+            "command": "/Users/tskim/.local/share/uv/tools/notebooklm-mcp-server/bin/notebooklm-mcp",
+            "args": []
+        }
+    }
+}

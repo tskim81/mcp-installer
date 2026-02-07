@@ -1,0 +1,16 @@
+# Ignore node modules
+node_modules/
+
+# Ignore system files
+.DS_Store
+*.log
+
+# Ignore editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore temporary files
+*.tmp
+.cache/
