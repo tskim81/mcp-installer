@@ -39,6 +39,11 @@ if ! command_exists uv; then
     export PATH="$HOME/.local/bin:$PATH"
 fi
 
+if ! command_exists npx; then
+    echo -e "${RED}❌ npx (Node.js) is not installed. Please install Node.js first.${NC}"
+    exit 1
+fi
+
 # Create necessary directories
 echo -e "${BLUE}📁 Creating directories...${NC}"
 mkdir -p "$HOME/.gemini/antigravity"
@@ -61,6 +66,11 @@ echo ""
 echo -e "${BLUE}📝 Installed components:${NC}"
 echo "  • Stitch MCP proxy: $HOME/.gemini/antigravity/stitch_proxy.py"
 echo "  • NotebookLM MCP: $HOME/.local/share/uv/tools/notebooklm-mcp-server/bin/notebooklm-mcp"
+echo "  • PayPal MCP: @paypal/mcp (via npx)"
+echo "  • Firebase MCP: firebase-tools (via npx)"
 echo "  • MCP Config: $HOME/.gemini/antigravity/mcp_config.json"
 echo ""
-echo -e "${GREEN}🎉 You can now use Stitch MCP and NotebookLM MCP!${NC}"
+echo -e "${RED}⚠️  IMPORTANT: Please update the configuration file with your PayPal credentials!${NC}"
+echo -e "Open $HOME/.gemini/antigravity/mcp_config.json and replace YOUR_* placeholders."
+echo ""
+echo -e "${GREEN}🎉 You can now use Stitch, NotebookLM, PayPal, and Firebase MCPs!${NC}"

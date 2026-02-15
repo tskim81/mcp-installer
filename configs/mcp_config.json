@@ -10,6 +10,29 @@
         "notebooklm": {
             "command": "/Users/tskim/.local/share/uv/tools/notebooklm-mcp-server/bin/notebooklm-mcp",
             "args": []
+        },
+        "paypal": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@paypal/mcp",
+                "--tools=all"
+            ],
+            "env": {
+                "PAYPAL_CLIENT_ID": "YOUR_CLIENT_ID",
+                "PAYPAL_CLIENT_SECRET": "YOUR_CLIENT_SECRET",
+                "PAYPAL_ENVIRONMENT": "sandbox",
+                "PAYPAL_ACCESS_TOKEN": "YOUR_ACCESS_TOKEN"
+            }
+        },
+        "firebase-mcp-server": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "firebase-tools@latest",
+                "mcp"
+            ],
+            "env": {}
         }
     }
 }

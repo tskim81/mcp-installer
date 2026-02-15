@@ -26,6 +26,8 @@ function showInstallInstructions(mcpName) {
 <strong>이 명령어는 다음을 자동으로 설치합니다:</strong><br>
 • Stitch MCP<br>
 • NotebookLM MCP<br>
+• PayPal MCP (설정 필요)<br>
+• Firebase MCP<br>
 • 설정 파일 (~/.gemini/antigravity/)
         `.trim();
 
@@ -41,6 +43,14 @@ function installStitch() {
 
 function installNotebookLM() {
     showInstallInstructions('NotebookLM MCP');
+}
+
+function installPayPal() {
+    showInstallInstructions('PayPal MCP');
+}
+
+function installFirebase() {
+    showInstallInstructions('Firebase MCP');
 }
 
 // 페이지 로드 시 환영 메시지
